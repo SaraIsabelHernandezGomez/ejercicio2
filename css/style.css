@@ -1,48 +1,52 @@
-*{
+body{
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: rgb(193, 126, 226);
+}
+form{
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    background: rgb(185, 185, 185);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(248, 152, 152);
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #000;
-    overflow: hidden;
+input, select, textarea, button{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #8ce9f0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+textarea{
+    resize: none;
+}
+button{
+    background-color: springgreen;
+    color: darkkhaki;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+button:hover{
+    background-color: darkgreen;
 }
 
-.container {
-    position: absolute;
-    top: 20%;
-    height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.circle{
-    position: absolute;
-    background: transparent;
-    width: calc(var(--i) * 2.5vmin);
-    aspect-ratio: 1;
-    border-radius: 50%;
-    border: 3px solid rgb(16,228,175);
-    transform-style: preserve-3d;
-    transform: rotateX(90deg) translateZ(40px);
-    animation: animate 3s ease-in-out calc(var(--i) * 0.10s) infinite;
-    box-shadow: 0 0 15px rgb(124,124,124),
-                inset 0 0 15px rgb(124,124,124);
-}
-
-@keyframes animate {
-    0%, 100%{
-        transform: rotateX(70deg) translateZ(50px) translateY(0);
-        filter: hue-rotate(0deg);
+@media (max-width: 768px){
+    form{
+        padding: 10px;
     }
-    60%{
-        transform: rotateX(70deg) translateZ(50px) translateY(-70vmin);
-        filter: hue-rotate(360deg);
+
+    input, select, textarea, button{
+        font-size: 14px;
     }
 }

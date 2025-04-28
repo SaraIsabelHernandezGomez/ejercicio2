@@ -1,31 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio de Formulario</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="circle" style="--i:0;"></div>
-        <div class="circle" style="--i:1;"></div>
-        <div class="circle" style="--i:2;"></div>
-        <div class="circle" style="--i:3;"></div>
-        <div class="circle" style="--i:4;"></div>
-        <div class="circle" style="--i:5;"></div>
-        <div class="circle" style="--i:6;"></div>
-        <div class="circle" style="--i:7;"></div>
-        <div class="circle" style="--i:8;"></div>
-        <div class="circle" style="--i:9;"></div>
-        <div class="circle" style="--i:10;"></div>
-        <div class="circle" style="--i:11;"></div>
-        <div class="circle" style="--i:12;"></div>
-        <div class="circle" style="--i:13;"></div>
-        <div class="circle" style="--i:14;"></div>
-        <div class="circle" style="--i:15;"></div>
-        <div class="circle" style="--i:16;"></div>
-        <div class="circle" style="--i:17;"></div>
-        <div class="circle" style="--i:18;"></div>
-        <div class="circle" style="--i:19;"></div>
-        <div class="circle" style="--i:20;"></div>
-    </div>
+    <form action="#" name="solucionFormulario">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" maxlength="30">
+          
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="correo@empresa.com" maxlength="30">
+          
+        <label for="asunto">Asunto</label>
+        <select name="asunto" id="asunto">
+        <option value="InformacionWeb">Pedir Información Web</option>
+        <option value="CitaPrevia">Solicitar Cita Previa</option>
+        <option value="Otros">Otros</option>
+        </select>
+        
+        <label for="marketing">¿Cómo nos has conocido?</label>
+        <div class="marketing">
+            <input type="checkbox" value="amigo" id="amigo"><label for="amigo">Un amigo</label>
+            <input type="checkbox" value="google" id="googleando"><label for="googleando">Googleando</label>
+            <input type="checkbox" value="redsocial" id="redsocial"><label for="redsocial">Red social</label>
+            <input type="checkbox" value="otros" id="otros"><label for="otros">Otros</label>
+        </div>
+        <label for="mensaje">Escribe tu mensaje</label>
+        <textarea name="mensaje" id="mensaje" maxlength="300"></textarea>
+        <input type="checkbox" value="Acepta RGPD" id="rgpd" required>
+        <label for="rgpd" class="rgpd">He leído y acepto el <a href="#" target="_blank">aviso legal y la política de privacidad</a></label>
+        
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
